@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link href="styles.css" rel="stylesheet" />
+    <title>CSS Animations</title>
+    <style>
+      /* Hover Styles */
+      button:hover {
+        /* apply when the cursor is hovering the button  */
+        background-color: green;
+        transform: scale(1.2);
+      }
+
+      /* transition automaticallly transitions between the two states */
+      button {
+        transition: all 1s;
+      }
+
+      /*  using a container to prevent death flicker */
+      a:hover {
+        color: deeppink;
+        transform: translateY(-5px);
+      }
+
+      a {
+        transition: all 0.5s;
+      }
+
+      .link-container:hover a {
+        /* when the outer container is hovered
+         change the a properties
+        */
+        color: deeppink;
+        transform: translateY(-5px);
+      }
+
+      /* Keyframe Animations */
+      @keyframes spin {
+        0% {
+          transorm: rotate(0);
+          color: deeppink;
+        }
+        70% {
+          transform: rotate(10deg);
+        }
+
+        100% {
+          transform: rotate(90deg);
+          color: purple;
+        }
+        /* from {
+          transorm: rotate(0);
+        }
+
+        to {
+          transform: rotate(90deg);
+        } */
+      }
+      /* apply the animations */
+      .box {
+        /* ease-in, ease-in-out */
+        animation: spin 1s infinite linear;
+        /* delay animation */
+        /* animation-delay: 5s; */
+      }
+    </style>
+  </head>
+  <body>
+    <h1>CSS Transitions and Animations</h1>
+    <section>
+      <h2>Hover States</h2>
+      <button>DO NOT PUSH</button>
+      <div class="spacer"></div>
+      <a href="#"> Follow Me to Another Site (death wiggle)</a>
+      <div class="spacer"></div>
+      <div class="link-container">
+        <a href="#"> Follow Me to Another Site </a>
+      </div>
+    </section>
+    <section>
+      <h2>Animations</h2>
+      <div class="box"></div>
+    </section>
+  </body>
+</html>

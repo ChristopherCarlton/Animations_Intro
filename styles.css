@@ -1,0 +1,35 @@
+html,
+body {
+  margin: 0;
+  height: 100%;
+  background: rgb(23, 39, 39);
+  color: whitesmoke;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  padding: 10px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.spacer {
+  height: 20px;
+}
+
+button {
+  background-color: deeppink;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+
+a {
+  display: inline-block;
+  color: inherit;
+}
+
+.box {
+  height: 100px;
+  width: 100px;
+  background: deeppink;
+}
